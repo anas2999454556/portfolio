@@ -312,6 +312,13 @@ const PROJECTS = [
     tags: ["React", "Vite"],
     url: "https://raise-you-roost.vercel.app/",
   },
+  {
+    name: "Brew Craft Bar & Kitchen",
+    description:
+      "Website for a craft beer and pub food venue in Chesterfield, VA, covering the beer list, the kitchen menu, and events.",
+    tags: ["React", "Vite"],
+    url: "https://brewbarandkitchen.vercel.app/",
+  },
 ];
 
 function Projects() {
@@ -337,7 +344,6 @@ function Projects() {
             <Reveal
               key={project.name}
               delay={i * 80}
-              className={i === PROJECTS.length - 1 ? "lg:col-start-2" : ""}
             >
               <div className="flex h-full flex-col rounded-2xl border border-border bg-background p-6 transition-colors hover:border-primary/30">
                 <h3 className="mb-2 text-lg font-semibold">{project.name}</h3>
