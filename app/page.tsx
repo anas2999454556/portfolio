@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import LightPillar from "@/components/LightPillar";
 import Reveal from "@/components/Reveal";
 import BlurText from "@/components/BlurText";
 
@@ -29,7 +28,6 @@ function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#home" className="flex items-center gap-2 text-xl font-bold tracking-tight">
-          <span className="inline-block h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-purple-400" />
           anas
         </a>
         <div className="hidden items-center gap-8 md:flex">
@@ -86,19 +84,6 @@ function Navbar() {
 function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
-      <div className="absolute inset-0 z-0 h-full w-full">
-        <LightPillar
-          topColor="#5227FF"
-          bottomColor="#FF9FFC"
-          intensity={0.9}
-          rotationSpeed={0.3}
-          glowAmount={0.006}
-          pillarWidth={2.5}
-          noiseIntensity={0.35}
-          mixBlendMode="screen"
-          quality="high"
-        />
-      </div>
       <div className="relative z-10 mx-auto flex min-h-[80vh] max-w-6xl flex-col items-center justify-center px-6 pb-24 pt-16 text-center">
         <Reveal>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
@@ -118,7 +103,7 @@ function Hero() {
               text="Anas"
               delay={80}
               direction="top"
-              className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl"
+              className="text-white text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl"
             />
           </div>
         </Reveal>
@@ -253,7 +238,7 @@ function Skills() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SKILLS.map((skill, i) => (
             <Reveal key={skill.name} delay={i * 60}>
-              <div className="group h-full rounded-2xl border border-border p-6 transition-colors hover:border-primary/30 hover:bg-muted/50">
+              <div className="group h-full rounded-2xl border border-border bg-background p-6 transition-colors hover:border-primary/30">
                 <h3 className="mb-1 text-lg font-semibold">{skill.name}</h3>
                 <p className="mb-4 text-sm text-muted-foreground">{skill.tagline}</p>
                 <div className="flex flex-wrap gap-2">
@@ -380,11 +365,10 @@ function Projects() {
 
 function Footer() {
   return (
-    <footer id="contact" className="border-t border-border py-12">
+    <footer id="contact" className="border-t border-border bg-background/80 backdrop-blur-md py-12">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <a href="#home" className="flex items-center gap-2 text-lg font-bold">
-            <span className="inline-block h-6 w-6 rounded-md bg-gradient-to-br from-primary to-purple-400" />
             anas
           </a>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
